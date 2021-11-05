@@ -1,0 +1,104 @@
+{% set imageList = ["And.png", "nand.png", "Or.png"]  %}
+{% set textList = ["And.png", "Nand.png", "Or.png"] %}
+{% set result = ["0", "1", "0"]  %}
+{% set gate = ["and1", "nand1", "or1"] %}
+{% set textGate = ["and", "nand", "or"] %}
+
+
+{% block meta %}
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+{% include "layouts/navbar.html" %}
+</body>
+</html>
+
+
+<script>
+
+
+    function logic(){
+
+        const x = document.getElementById("checkbox1")
+        const y = document.getElementById("checkbox2")
+        if (x.checked && y.checked){
+            document.getElementById("and").innerHTML = "0";
+        }
+        else {
+            document.getElementById("and").innerHTML = "0";
+        }
+        if (!(x.checked && y.checked)){
+            document.getElementById("nand").innerHTML = "1";
+        }
+        else {
+            document.getElementById("nand").innerHTML = "1";
+        }
+        if (x.checked || y.checked){
+            document.getElementById("or").innerHTML = "1";
+        }
+        else {
+            document.getElementById("or").innerHTML = "1";
+        }
+    }
+</script>
+{% endblock %}
+
+{% block body %}
+<h1 style="center: #fcfcfc; font-family: 'Arial Black'; font-size: 65">Logic Gate Lab</h1>
+
+
+
+
+<div class="col-3">
+            <h2 class="text-left">Inputs
+            A             B</h2>
+            <form name="form" method="POST">
+                <label>
+                    <input type="checkbox" name="a" class="inline checkbox" id="checkbox1" value="unchecked">
+                </label>
+
+                <label>
+                    <input type="checkbox" name="b" class="incline checkbox" id="checkbox2" value="unchecked">
+                </label>
+
+                <input type="button" onclick="logic()" value="Submit">
+            </form>
+        </div>
+        <div class="col-9">
+            <table>
+                <table border="2">
+
+                <tr>
+                    <th>Symbol</th>
+                    <th>Name</th>
+                    <th>Result</th>
+                </tr>
+                {% for item in imageList %}
+
+                <tr>
+                    <td class="col-3">
+                        <img class="img-responsive py-3" id="{{ gate[loop.index0] }}" alt="" width="256" height="Auto" src="/static/assets/{{ item }}" >
+                    </td>
+                    <td class="col-3"> {{ textList[loop.index0] }}</td>
+                    <td id="{{ textGate[loop.index0] }}" class="col-3">{{ result[loop.index0] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+    <style>
+        body {
+
+
+        background-image: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
+            background-size: 1920px 1200px;
+
+        }
+
+    </style>
+
+    {% endblock %}

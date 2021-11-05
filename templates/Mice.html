@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html lang="en">
+{% include "layouts/navbar.html" %}
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <title>Mice</title>
+</head>
+
+<style>
+    body {
+        text-align: center;
+        background-color: blanchedalmond;
+        background-size: 200%;
+    }
+    .small-container{
+        max-width: 1080px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .col-4{
+        flex-basis: 25%;
+        padding: 10px;
+        min-width: 200px;
+        margin-bottom: 50px;
+    }
+    .col-4 img{
+        width: 100%;
+        border:2px solid #fff;
+        -moz-box-shadow: 10px 10px 5px #ccc;
+        -webkit-box-shadow: 10px 10px 5px #ccc;
+        box-shadow: 10px 10px 5px #ccc;
+        -moz-border-radius:25px;
+        -webkit-border-radius:25px;
+        border-radius:25px;
+        transition: transform 0.5s;
+    }
+    .rainbow-text {
+        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
+        color: transparent;
+    }
+    h1 {
+        font-family: "blackletter";
+        font-size: 100px;
+    }
+    .title {
+        font-size: 50px;
+        text-align: center;
+        margin: 0 auto 80px;
+        position: relative;
+        line-height: 60px;
+        color: black;
+    }
+    .title::after {
+        content: '';
+        background: #ff523b;
+        width: 80px;
+        height: 5px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .rating .fa{
+        color: gold;
+    }
+    .col-4:hover{
+        transform: translateY(-5px);
+    }
+</style>
+
+<body>
+<div class="small-container">
+    <h2 class="title">Mice</h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.WJvm2oKWpTbbAke6j6LzLwHaIO&pid=Api">
+            <h5> ---- </h5>
+            <h4 style="text-align: center">Logitech - G PRO Wireless Optical Gaming Mouse with RGB Lighting - Black</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i style="color: gold">4.7</i>
+            </div>
+            <p style="color: lightgray">$114.99</p>
+            <a href="#" class="btn btn-primary">Buy</a>
+
+        </div>
+        <div class="col-4">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.hXP_S1V4OQSmQGRdoHwZugHaKB&pid=Api">
+            <h5> ---- </h5>
+            <h4 style="text-align: center">SteelSeries Prime Wireless FPS Gaming Mouse - Black</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class='fa fa-star-half-o'></i>
+                <i style="color: gold">4.5</i>
+            </div>
+            <p style="color: lightgray">$116.80</p>
+            <a href="#" class="btn btn-primary">Buy</a>
+
+        </div>
+        <div class="col-4">
+            <img src="https://m.media-amazon.com/images/I/61i0CV-tKpL._AC_SL1500_.jpg">
+            <h5> ---- </h5>
+            <h4 style="text-align: center">Amazon Basics 3-Button USB Wired Computer Mouse - Black</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class='fa fa-star-half-o'></i>
+                <i style="color: gold">4.6</i>
+            </div>
+            <p style="color: lightgray">$9.04</p>
+            <a href="#" class="btn btn-primary">Buy</a>
+
+        </div>
+        <div class="col-4">
+            <img src="https://www.windowscentral.com/sites/wpcentral.com/files/styles/large/public/field/image/2020/12/razer-essential-white.jpg">
+            <h5> ---- </h5>
+            <h4 style="text-align: center">Razer DeathAdder Essential Gaming Mouse - Mercury White</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class='fa fa-star'></i>
+                <i style="color: gold">4.7</i>
+            </div>
+            <p style="color: lightgray">$22.99</p>
+            <a href="#" class="btn btn-primary">Buy</a>
+
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<section>
+    <h1 class="rainbow-text">RAZER BASILISK V3</h1>
+    <h3></h3>
+    <div>
+        <img src="https://assets2.razerzone.com/pages/basilisk-v3-4D578898E8144Le8da21dde32b7a9f5f/chroma-rgb.jpg">
+    </div>
+</section>
+
+<section>
+    <div style="position: absolute;top: 1000px; right: 800px">
+        <img src="//assets2.razerzone.com/images/pnx.assets/eec436e7748e57df7f70e57047c1d889/second-gen.png" alt="" pnxssr_96="">
+        <p style="color:green">11 PROGRAMMABLE BUTTONS</p></div>
+    <div style="position: absolute;top: 1000px;left: 16px;">
+        <img src="//assets2.razerzone.com/images/pnx.assets/eec436e7748e57df7f70e57047c1d889/dpi.png" alt="" pnxssr_100="">
+        <p style="color:green">RAZER™ FOCUS+ 26K DPI <br>OPTICAL SENSOR</p></div>
+    <div  style="position: absolute;top: 1780px;left: 16px;">
+        <img src="//assets2.razerzone.com/images/pnx.assets/eec436e7748e57df7f70e57047c1d889/ic3.png" alt="" pnxssr_104="">
+        <p style="color:green">ICONIC ERGONOMIC DESIGN WITH THUMB REST</p></div>
+    <div style="position: absolute;top: 1000px;right: 16px;">
+        <img src="//assets2.razerzone.com/images/pnx.assets/eec436e7748e57df7f70e57047c1d889/onboard.png" alt="" pnxssr_108="">
+        <p style="color:green">5 ON-BOARD MEMORY PROFILES</p></div>
+    <div style="position: absolute;top: 1780px;right: 16px;">
+        <img src="//assets2.razerzone.com/images/pnx.assets/eec436e7748e57df7f70e57047c1d889/ptfe.png" alt="" pnxssr_112="">
+        <p style="color:green">100% PTFE MOUSE FEET</p></div>
+</section>
+</body>
+
+</html>

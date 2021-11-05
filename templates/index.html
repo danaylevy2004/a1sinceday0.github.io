@@ -1,0 +1,20 @@
+<!-- Extending the project layout, as this file will do minor customizations -->
+{% extends "layouts/base.html" %}
+
+<!-- Setting up variables to customize "project" details to be specific to index page -->
+{% set project = "A1 Gaming" %}
+{% set overview = "https://youtu.be/dQw4w9WgXcQ" %}
+{% set repo = "https://github.com/kar722/a1-gaming/" %}
+
+
+{% block background %}
+
+
+
+<style>
+    body {
+        background-image: url('https://images.hdqwalls.com/download/abstract-vector-graphic-design-hf-1920x1080.jpg');
+    }
+</style>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+<!-- Extending the project layout, as this file will do minor customizations -->
+{% extends "layouts/base.html" %}
+
+<!-- Setting up variables to customize "project" details to be specific to walruses -->
+{% set project = "Consoles" %}
+{% set PlayStation = "https://www.youtube.com/watch?v=qXU-4Dwkv2E" %}
+{% set Xbox = "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber" %}
+{% set Nintendo = "https://github.com/avabrooks/Python-Web-Portfolio-Series-Demo" %}
+
+{% block links %}
+
+    <div class="col-3">
+        <a style = "position:relative; left:-90px; top: -10px;" href="/PlayStation/" class="btn">PlayStation</a>
+    </div>
+
+    <div class="col-3">
+        <a style = "position:relative; left:-85px; top: -10px;" href="/xbox/" class="btn">Xbox</a>
+    </div>
+
+    <div class="col-3">
+        <a style = "position:relative; left:-200px; top: -10px;" href="/Nintendo/" class="btn">Nintendo</a>
+    </div>
+
+{% endblock %}
+
+</html>
+
+<!-- Setting up a block replacement to customize background to RINGS -->
+{% block background %}
+    <style>
+        body {
+            background-image: url('https://lh3.googleusercontent.com/cIJbLe1TvnaNJrW_LXO6OVCD6N6R9ny3IN7TzlCcfKbxO1B-rthZV1fCHWCNGcq-pMy0xq2L2GkSqZ8ZPfN6M3AHYPpCmgFSSYz2kA=s2500');
+        }
+    </style>
+{% endblock %}
